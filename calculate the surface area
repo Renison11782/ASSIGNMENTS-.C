@@ -1,0 +1,28 @@
+/*
+name:Robinson Renison
+reg:CT100/G/26162/25
+des:calculating  volume and surface area
+*/
+#include <stdio.h>
+#include <math.h> 
+int main() {
+
+	double radius =0.0;
+	double height =0.0;
+	double volume =0.0;
+ 	double surface_area = 0.0;
+	const double PI =3.14;
+	
+	printf("insert the radius of the cylinder:");
+	scanf("%lf", &radius);
+
+	printf("insert the height of the cylinder:");
+	scanf("%lf",&height);
+	
+	volume = PI * pow(radius,2) * height;
+	surface_area =((2 * PI * pow(radius,2)) + (2 * PI * radius * height));
+	 
+	printf("The volume ofthe cylinder is %lf and the surface_ area is %lf" , volume,surface_area);
+	
+	 return 0;
+}
