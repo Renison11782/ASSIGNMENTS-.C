@@ -27,7 +27,6 @@ int main()
 		printf("Transaction %d:",i);
 		scanf("%lf",&transaction_amount);
 		fprintf(fp, "%.2f\n",transaction_amount);
-		total_sales += transaction_amount;
 	}
 	fclose(fp);
 	
@@ -38,8 +37,10 @@ int main()
 	}
 	while(fscanf(fp, "%lf",&transaction_amount) == 1)
 	{
-		fclose(fp);
+		total_sales += transaction_amount;
 	}
+	fclose(fp);
+	
 	printf("------ Daily Sales Report:------\n");
 	
 	printf("SUCCESSFULY READ ALL TRANSACTIONS FROM: %s\n",filename);
@@ -47,4 +48,5 @@ int main()
 	printf("The total sales for the day is: Ksh%.2f\n", total_sales);
 	
 	return 0;
+
 }
